@@ -1,1 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
+li {
+  list-style-type: none;
+  line-height: 15px;
+}
+h1 {
+  color: coral;
+}
+.container {
+  width: 790px;
+  height: 100vh;
+  margin:auto;
+
+}
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+.todo-list {
+  height: calc( 100vh - 70px);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.item:last-of-type {
+  border-bottom: 1px solid lightgray;
+}
+.item {
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+.add-todo:hover {
+  border: 1px solid coral;
+  color: coral;
+}
+
+.add-input {
+  width: 400px;
+  height: 25px;
+  border: 1px solid lightgray;
+}
+.add-todo {
+  padding:  3px 10px;
+  border: 1px solid gray;
+  border-radius: 13px;
+  color: gray;
+  cursor: pointer;
+}
+.item {
+  display: flex;
+  padding: 10px;
+  align-items: baseline;
+}
+.item i {
+  font-size: 12px;
+  padding-right: 5px;
+  color: coral;
+}
+.item li {
+  color: gray;
+
+}
+.delete:hover {
+  background-color: coral;
+  border: 1px solid coral;
+  color: white;
+}
+.delete {
+  padding:  3px 10px;
+  /* width: 33px; */
+  border: 1px solid gray;
+  border-radius: 13px;
+  cursor: pointer;
+  margin-left: 10px;
+}

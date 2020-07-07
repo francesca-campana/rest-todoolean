@@ -11,20 +11,27 @@
     <title>Todoolean</title>
   </head>
   <body>
-    <h2>Todoolean</h2>
-    <div class="">
-      <input type="text" placeholder="Scrivi qui">
-      <button id="add-todo">Inserisci</button>
+    <div class="container">
+      <div class="sidebar">
+        <h1>Todoolean</h1>
+        <div class="add">
+          <input class="add-input" type="text" placeholder="Scrivi qui">
+          <button id="add-todo" class="add-todo">Inserisci</button>
+        </div>
+      </div>
+      <ul id="todo-list" class="todo-list">
+      </ul>
     </div>
-    <ul id="todo-list">
 
-
-    </ul>
 
 
 
     <script id="list-template" type="text/x-handlebars-template">
-      <li data-todo="{{ id }}" class="todo-list-item">{{ text }} <button class="delete"> x </button></li>
+      <div class="item">
+        <i class="fas fa-star"></i>
+        <li data-todo="{{ id }}" class="todo-list-item">{{ text }} <button class="delete">delete</button></li>
+      </div>
+
     </script>
     <script type="text/javascript" src="js/script.js">
     </script>
