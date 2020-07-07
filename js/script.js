@@ -32,12 +32,21 @@ $(document).ready(function(){
 
   });
 
-  $(document).on('click', '.delete'
+  $(document).on('click', '.delete',
     function (){
+      var id = $(this).parent().attr('data-todo');
+      console.log(id)
       $.ajax(
         {
-          url: 'http://157.230.17.132:3003/todos/',
+          url: 'http://157.230.17.132:3003/todos/' + id,
           method: 'DELETE',
+          success: function(dataRes){
+            getTodoTodo();
+
+          },
+          error: function(){
+            alert('errore di sistema');
+          }
 
         }
       );
